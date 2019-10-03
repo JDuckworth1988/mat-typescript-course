@@ -12,10 +12,21 @@ export class Actions {
         await element.click();
     }
 
+    public getTextFromElement = async (element: ElementFinder) => {
+        await browser.wait(ExpectedConditions.elementToBeClickable(element));
+        return await element.getText();
+    }
+
     public clickOnElementInTable = async (tableElement: ElementFinder, rowSelector: string, text: string) => {
             const row = tableElement.$(rowSelector);
             await browser.wait(ExpectedConditions.visibilityOf(row));
             await tableElement.all(by.cssContainingText(rowSelector, text)).first().click();
         }
+
+    public checkForElementInTable = async (tableElement: ElementFinder, rowSelector: string, text: string) => {
+            const row = tableElement.$(rowSelector);
+            await browser.wait(ExpectedConditions.visibilityOf(row));
+            return await tableElement.all(by.cssContainingText(rowSelector, text)).first().isPresent();
+    }
 
 }
