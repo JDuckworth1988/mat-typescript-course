@@ -1,7 +1,7 @@
 Feature: Login
 
 Background: a user logs in
-Given a user logs in with username 'test@1.8.4' and password 'NFsUj4b9XkYN'
+Given a user logs in with username 'test@dev' and password 'a'
 
 @runThis
 Scenario: a customer is selected

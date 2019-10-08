@@ -4,7 +4,7 @@ export const config: Config = {
 
     seleniumAddress: "http://127.0.0.1:4444/wd/hub",
 
-    baseUrl: "https://us.val.mamvol.uk/r/1.8.4/web/authenticate",
+    baseUrl: "http://172.20.4.94/dev/vastweb/authenticate",
 
     allScriptsTimeout: 60000,
 
