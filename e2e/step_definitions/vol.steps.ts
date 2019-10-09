@@ -10,7 +10,6 @@ const volPEPage: VolPartsEntryPage = new VolPartsEntryPage();
 const chai = require("chai").use(require("chai-as-promised"));
 const expect = chai.expect;
 
-var {setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);
 
 Given("a user logs in with username {string} and password {string}", function(username, password) {
