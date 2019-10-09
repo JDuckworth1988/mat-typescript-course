@@ -1,4 +1,4 @@
-import { Before, After, Given, Status } from "cucumber";
+import { Before, After, Given, Status, When } from "cucumber";
 import { Actions } from "../support/actions";
 
 import { browser } from "protractor";
@@ -15,6 +15,10 @@ Before({timeout: 100 * 1000}, async function() {
 });
 
 Given(/^a slow step$/, {timeout: 60 *1000}, function() {
+    // Does some slow browser/filesystem/network actions
+});
+
+When(/^a slow step$/, {timeout: 60 *1000}, function() {
     // Does some slow browser/filesystem/network actions
 });
 
