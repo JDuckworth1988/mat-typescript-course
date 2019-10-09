@@ -14,6 +14,10 @@ Before({timeout: 100 * 1000}, async function() {
 
 });
 
+Given(/^a slow step$/, {timeout: 60 *1000}, function() {
+    // Does some slow browser/filesystem/network actions
+});
+
 // This will run after every scenario
 After({timeout: 100 * 1000}, async function(scenario) {
 
