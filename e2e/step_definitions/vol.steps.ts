@@ -12,7 +12,7 @@ const expect = chai.expect;
 
 setDefaultTimeout(60 * 1000);
 
-Given("a user logs in with username {string} and password {string}", function(username, password) {
+Given("a user logs in with username {string} and password {string}", async function(username, password) {
 
   // Write code here that turns the phrase above into concrete actions
   this.actions.sendKeys(volLoginPage.usernameField, username);
