@@ -1,4 +1,4 @@
-import { When, Then, Given, setDefaultTimeout } from "cucumber";
+import { Given, setDefaultTimeout, Then, When } from "cucumber";
 import { VolHomePage } from "../page_objects/vol_objects/vol-home.page";
 import { VolLoginPage } from "../page_objects/vol_objects/vol-login.page";
 import { VolPartsEntryPage } from "../page_objects/vol_objects/vol-pe.page";
@@ -10,9 +10,10 @@ const volPEPage: VolPartsEntryPage = new VolPartsEntryPage();
 const chai = require("chai").use(require("chai-as-promised"));
 const expect = chai.expect;
 
+var {setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);
 
-Given('a user logs in with username {string} and password {string}', function (username, password) {
+Given("a user logs in with username {string} and password {string}", function(username, password) {
 
   // Write code here that turns the phrase above into concrete actions
   this.actions.sendKeys(volLoginPage.usernameField, username);
@@ -21,7 +22,7 @@ Given('a user logs in with username {string} and password {string}', function (u
   return this.actions.click(volLoginPage.loginButton);
 });
 
-When('we select a customer called {string}', async function (customerName) {
+When("we select a customer called {string}", async function(customerName) {
 
   this.actions.click(volHomePage.customerContactButton);
 
@@ -35,7 +36,7 @@ When('we select a customer called {string}', async function (customerName) {
 
 });
 
-Then('we see what vehicles they own {string}', async function(vehicleMake) {
+Then("we see what vehicles they own {string}", async function(vehicleMake) {
 
   return expect(this.actions
     .checkForElementInTable(volPEPage.vehicleResultsTable, volPEPage.vehicleCellSelector, vehicleMake)

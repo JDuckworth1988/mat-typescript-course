@@ -20,10 +20,14 @@ export const config: Config = {
     },
 
     cucumberOpts: {
+      // TypeScript compiler
         compiler: "ts:ts-node/register",
+      // Report format
         format: "json:.tmp/results.json",
         profile: false,
+      // The locations of out steps and hooks
         require: ["./step_definitions/*.steps.js", "./support/hooks.js"],
+      // Tags stating which scenarios we will run
         tags: "not @ignore",
         "no-source": true,
     },

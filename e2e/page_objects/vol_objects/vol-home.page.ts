@@ -1,8 +1,7 @@
 import { $ } from "protractor";
 
-export class VolHomePage{
+export class VolHomePage {
 
-    public customerContactButton = $("button[id='POS.Customer Contact']")
-    
+    public customerContactButton = $("button[id='POS.Customer Contact']");
 
 }

@@ -1,4 +1,4 @@
-import { ElementFinder, ExpectedConditions, browser, by } from "protractor";
+import { browser, by, ElementFinder, ExpectedConditions } from "protractor";
 
 export class Actions {
 
