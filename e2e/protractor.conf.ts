@@ -4,9 +4,9 @@ export const config: Config = {
 
     seleniumAddress: "http://127.0.0.1:4444/wd/hub",
 
-    baseUrl: "http://172.20.4.94/dev/vastweb/authenticate",
+    baseUrl: "http://172.20.4.94/master/vastweb/authenticate",
 
-    allScriptsTimeout: 60000,
+    allScriptsTimeout: 60000 * 2,
 
     framework: "custom",
     frameworkPath: require.resolve("protractor-cucumber-framework"),

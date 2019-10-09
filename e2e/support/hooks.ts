@@ -1,4 +1,4 @@
-import { Before, After, Given, Status, When } from "cucumber";
+import { After, Before, Given, Status, Then, When } from "cucumber";
 import { Actions } from "../support/actions";
 
 import { browser } from "protractor";
@@ -13,15 +13,19 @@ Before({timeout: 100 * 1000}, async function() {
     await browser.get("");
 
 });
-
-Given(/^a slow step$/, {timeout: 60 *1000}, function() {
+/*
+Given(/^a slow step$/, {timeout: 60 * 1000}, function() {
     // Does some slow browser/filesystem/network actions
 });
 
-When(/^a slow step$/, {timeout: 60 *1000}, function() {
+When(/^a slow step$/, {timeout: 60 * 1000}, function() {
     // Does some slow browser/filesystem/network actions
 });
 
+Then(/^a slow step$/, {timeout: 60 * 1000}, function() {
+    // Does some slow browser/filesystem/network actions
+});
+*/
 // This will run after every scenario
 After({timeout: 100 * 1000}, async function(scenario) {
 
