@@ -1,4 +1,4 @@
-import { Before, After, Status } from "cucumber";
+import { Before, After, Given, Status } from "cucumber";
 import { Actions } from "../support/actions";
 
 import { browser } from "protractor";
